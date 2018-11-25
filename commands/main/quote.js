@@ -33,7 +33,7 @@ module.exports = class QuoteCommand extends Command {
 			.setColor('#7E0097')
 			.setAuthor(`${fetched.author.username} a dit :`, fetched.author.avatarURL)
 			.setDescription(fetched.content)
-			.setFooter(`Dans #${fetched.channel.name} sur le serveur ${fetched.channel.guild.name}`);
+			.setFooter(`Dans #${fetched.channel.name} sur le serveur ${fetched.channel.guild.name}, par ${message.author.username}`);
 
 		await message.delete();
 
